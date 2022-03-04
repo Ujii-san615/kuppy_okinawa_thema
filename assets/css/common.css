@@ -779,19 +779,12 @@ main {
   font-size: 14px;
 }
 
-.news_table .label {
-  border-radius: 3px;
-  color: #fff;
-  padding: 2px 5px;
-  margin: 0 20px;
-}
-
 .news_table .text {
   font-size: 15px;
 }
 
 .news_table .green_label {
-  background-color: #31864d;
+  background-color: #50b572;
 }
 
 .news_table .orange_label {
@@ -799,7 +792,19 @@ main {
 }
 
 .news_table .blue_label {
-  background-color: #666f81;
+  background-color: #7082a6;
+}
+
+.news_table .entry-label {
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.news_table .label {
+  border-radius: 3px;
+  color: #fff;
+  padding: 2px 5px;
+  margin: 0 20px;
 }
 
 @media (max-width: 750px) {

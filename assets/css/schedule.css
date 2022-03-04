@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/* -------------------------------------- */
+/*    schedule  ココから                   */
+/* -------------------------------------- */
+section .schedule {
+  width: 100%;
+}
+
+section #section1 .day_schedule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+section #section1 .day_schedule img {
+  max-width: 94vw;
+  margin: 0 auto;
+}
+
+section #section1 .pc {
+  display: none;
+}
+
+section #section2 {
+  width: 100%;
+}
+
+section #section2 .schedule_wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section #section2 .schedule_wrap .schedule_box {
+  width: 45%;
+  max-width: 200px;
+  margin: 5px;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+section #section2 .schedule_wrap .schedule_box img {
+  width: 100%;
+}
+
+section #section2 .schedule_wrap .schedule_box .schedule_text ul.schedule_ul {
+  padding: 0px;
+  color: #006400;
+  background: #fffae7;
+  border: dashed 2px #5aa501;
+  border-radius: 0px;
+  list-style: none;
+  height: 85px;
+}
+
+section #section2 .schedule_wrap .schedule_box .schedule_text ul.schedule_ul li {
+  font-size: 0.7em;
+  position: relative;
+  line-height: 20px;
+  padding-left: 30px;
+  font-weight: bold;
+}
+
+section #section2 .schedule_wrap .schedule_box .schedule_text ul.schedule_ul li:before {
+  /*list前装飾*/
+  content: "・";
+  position: absolute;
+  left: 5px;
+  font-size: 20px;
+}
+
+section #section3 {
+  width: 90%;
+}
+
+section #section3 .toen_text {
+  margin-bottom: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: start;
+}
+
+section #section3 .download_pdf ul {
+  padding: 10px;
+}
+
+section #section3 .download_pdf ul li {
+  padding-right: 30px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section #section3 .download_pdf ul li a.btn--yellow {
+  color: #1c116c;
+  background-color: #98f6ff;
+  width: 90%;
+  text-align: center;
+  font-weight: bold;
+}
+
+section #section3 .download_pdf ul li a.btn--yellow:hover {
+  color: #000;
+  background: #98f6ff;
+}
+
+section #section3 .download_pdf ul li a.btn--yellow.btn--cubic {
+  border-bottom: 5px solid #699bb5;
+}
+
+section #section3 .download_pdf ul li a.btn--yellow.btn--cubic:hover {
+  margin-top: 3px;
+  border-bottom: 2px solid #699bb5;
+}
+
+section #section3 .download_pdf ul li a.btn-c {
+  font-size: 0.7rem;
+  position: relative;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 100vh;
+}
+
+section #section3 .download_pdf ul li a.btn-c i.fa {
+  margin-right: 1rem;
+}
+
+/* ------- schedule レスポンシブ  pc------------ */
+@media screen and (min-width: 767px) {
+  section .schedule {
+    width: 100%;
+  }
+  section #section1 .day_schedule {
+    display: none;
+  }
+  section #section1 .day_schedule img {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  section #section1 .sp {
+    display: none;
+  }
+  section #section1 .pc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section #section2 {
+    width: 100%;
+  }
+  section #section2 .schedule_wrap {
+    width: 100%;
+    max-width: 1000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: stretch;
+        align-content: stretch;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: auto;
+  }
+  section #section2 .schedule_wrap .schedule_box {
+    width: 20%;
+  }
+  section #section2 .schedule_wrap .schedule_box img {
+    width: 100%;
+  }
+  section #section2 .schedule_wrap .schedule_box .schedule_text {
+    font-size: 5px;
+  }
+  section #section3 {
+    max-width: 550px;
+  }
+  section #section3 .toen_text {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
+/* -------------------------------------- */
+/*    schedule  end                       */
+/* -------------------------------------- */
+/*# sourceMappingURL=schedule.css.map */

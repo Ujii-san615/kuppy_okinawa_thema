@@ -595,23 +595,28 @@ main{
     .day{
         font-size: 14px;
     }
+    
+    .text{
+        font-size: 15px;
+    }
+    .green_label{
+        background-color:#50b572;
+    }
+    .orange_label{
+        background-color:#ffc400;
+    }
+    .blue_label{
+        background-color:#7082a6;
+    }
+    .entry-label {
+        display: inline-block;
+        border-radius: 3px;
+    }
     .label{
         border-radius:3px;
         color:#fff;
         padding:2px 5px;
         margin:0 20px;
-    }
-    .text{
-        font-size: 15px;
-    }
-    .green_label{
-        background-color:rgb(49, 134, 77);
-    }
-    .orange_label{
-        background-color:rgb(255, 196, 0);
-    }
-    .blue_label{
-        background-color:rgb(102, 111, 129);
     }
 }
 

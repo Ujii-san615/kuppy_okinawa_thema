@@ -1,5 +1,6 @@
 <?php include ( dirname(__FILE__) . '/header.php' ); ?>
 
+<body>
 <main>
         <!-- slider -->        
         <div class="top_slider">

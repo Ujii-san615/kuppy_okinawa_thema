@@ -1,19 +1,26 @@
+
+<body>
+<main>
 <section>
-        <div id="page-title"><img src="/assets/img/title_hoiku.png" alt="保育内容"></div>
+        <div id="page-title">
+            <img src="<?php bloginfo('template_directory'); ?>/images/title_hoiku.png" alt="保育内容">
+        </div>
     </section>
     <section>
         <div class="section_01">
-            <div class="title_small"><img src="/assets/img/title_rinen.png" alt="保育理念"></div>
+            <div class="title_small">
+                <img src="<?php bloginfo('template_directory'); ?>/images/title_rinen.png" alt="保育理念">
+            </div>
             <div class="page-rinen">
-                <img src="/assets/img/hoikurinen.png" alt="保育理念">
-                <img src="/assets/img/hoiku_kuppi-ko.png" alt="クッピー乳児園_保育理念">
+                <img src="<?php bloginfo('template_directory'); ?>/images/hoikurinen.png" alt="子供の幸せを一番に願い、心身ともに豊かでたくましい子供の育成を目指します。">
+                <img src="<?php bloginfo('template_directory'); ?>/images/hoiku_kuppi-ko.png" alt="笑顔！元気！やる気！クッピーっ子">
             </div>
         </div>
     </section>
     <section>
         <div class="section section_wrap">
             <div class="section_half">
-                <img src="/assets/img/title_housin.png" alt="保育方針">
+                <img src="<?php bloginfo('template_directory'); ?>/images/title_housin.png" alt="保育方針">
                 <ul>
                     <li>子ども一人ひとりにたくさんの愛情を注ぎ、心を育て、自尊心を高めます。</li>
                     <li>基本的生活習慣の自立を目指します（食事、排泄、着脱、午睡、身の回りの片づけなど）。</li>
@@ -23,7 +30,7 @@
             </div>
 
             <div class="section_half">
-                <img src="/assets/img/title_mokuhyo.png" alt="保育目標">
+                <img src="<?php bloginfo('template_directory'); ?>/images/title_mokuhyo.png" alt="保育目標">
                 <ul>
                     <li>のびのびと明るく元気な子。</li>
                     <li>最後まであきらめず頑張る子。</li>
@@ -37,9 +44,9 @@
     <section>
         <div class="section section_wrap">
             <div class="section_large">
-                <img src="/assets/img/title_tokucho.png" alt="保育の特徴">
+                <img src="<?php bloginfo('template_directory'); ?>/images/title_tokucho.png" alt="保育の特徴">
                 <div class="tokucho_img">
-                    <img src="/assets/img/re_tokutyo_img.png" alt="保育の特徴画像">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/re_tokutyo_img.png" alt="保育の特徴画像">
                 </div>
 
                 <ul>
@@ -60,3 +67,4 @@
         </div>
     </section>
 <!--recrut-->
+</main>

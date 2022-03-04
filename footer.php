@@ -29,3 +29,5 @@
             nextArrow: '<img src="<?php echo get_template_directory_uri();?>/images/right.png" class="slick-next slick-arrow">',//矢印部分NextのHTMLを変更
         });
     </script>
+</body>
+</html>

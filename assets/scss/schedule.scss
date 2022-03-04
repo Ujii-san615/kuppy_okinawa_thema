@@ -1,0 +1,227 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* -------------------------------------- */
+/*    schedule  ココから                   */
+/* -------------------------------------- */
+.section_03 {
+    width: 90%;
+    margin-bottom: 50px;
+    .day_schedule {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    .day_schedule >img{
+            margin: 0 auto;
+            width: 80%;
+    }
+}
+
+//年間行事//
+.section_04{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    .schedule_wrap{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        .schedule_box{
+            width: 20%;
+            margin: 5px;
+            align-content: stretch;
+            img{
+                width: 100%;
+            }
+            .schedule_text{
+                ul{
+                    padding: 0px;
+                    color: #006400;
+                    background: #fffae7;
+                    border: dashed 2px #5aa501;
+                    border-radius: 0px;
+                    list-style: none;
+                    height: 85px;
+                    li{
+                        font-size: 0.7em;
+                        position: relative;
+                        line-height: 20px;
+                        padding-left: 30px;
+                        font-weight: bold;
+                        font-size: 13px;
+                    }
+                    li:before{/*list前装飾*/
+                        content: "・";
+                        position: absolute;
+                        left: 5px;
+                        font-size: 20px; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ------- schedule レスポンシブ  pc------------ */
+
+@media screen and (min-width: 767px) {
+    .section_03 {
+        width: 90%;
+    }
+    .pc{
+        display: flex !important;
+    }
+    .sp{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .section_03 {
+        width: 100%;
+        .day_schedule {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .day_schedule {
+            img{
+                margin: 0 auto;
+                width: 96%;
+            }
+        }
+    }
+    .pc{
+        display: none !important;
+    }
+    .sp{
+        display: flex !important;
+    }
+    //年間行事//
+.section_04{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    .schedule_wrap{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        .schedule_box{
+            width: 45%;
+            margin: 5px;
+            align-content: stretch;
+            img{
+                width: 100%;
+            }
+            .schedule_text{
+                ul.schedule_ul{
+                    padding: 0px;
+                    color: #006400;
+                    background: #fffae7;
+                    border: dashed 2px #5aa501;
+                    border-radius: 0px;
+                    list-style: none;
+                    height: 85px;
+                    li{
+                        font-size: 0.7em;
+                        position: relative;
+                        line-height: 20px;
+                        padding-left: 30px;
+                        font-weight: bold;
+                        font-size: 13px;
+                    }
+                    li:before{/*list前装飾*/
+                        content: "・";
+                        position: absolute;
+                        left: 5px;
+                        font-size: 20px; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+}
+
+#toen{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.toen_text{
+    margin-bottom: 30px;
+    align-items: center;
+    text-align: center;
+}
+    .section_toen{
+        margin: 50px;
+    }
+    .download_pdf{
+        margin:50px 40px;
+        width: 100%;
+        ul{
+            padding:0 70px;
+            li{
+                padding-right: 30px;
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a.btn--yellow {
+                    color: #1c116c;
+                    background-color: #98f6ff;
+                    width: 90%;
+                    text-align: center;
+                    font-weight: bold;
+                }
+                    
+                a.btn--yellow:hover {
+                    color: #000;
+                    background: #98f6ff;
+                }
+                    
+                a.btn--yellow.btn--cubic {
+                    border-bottom: 5px solid #699bb5;
+                }
+                    
+                a.btn--yellow.btn--cubic:hover {
+                    margin-top: 3px;
+                    border-bottom: 2px solid #699bb5;
+                }
+                    
+                a.btn-c {
+                    font-size: 0.7rem;
+                    position: relative;
+                    padding: 0.5rem 1rem 0.5rem 1rem;
+                    border-radius: 100vh;
+                }
+                    
+                a.btn-c i.fa {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+/* -------------------------------------- */
+/*    schedule  end                       */
+/* -------------------------------------- */
