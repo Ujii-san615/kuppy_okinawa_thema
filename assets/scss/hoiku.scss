@@ -1,0 +1,96 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.section_01,.section_wrap{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 0 auto;
+    img{
+        width: 300px;
+    }
+    .tokucho_img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 100%;
+        }
+    }
+}
+.section_half{
+    margin: 0 auto !important;
+    img{
+        width: 300px;
+    }
+}
+.page-rinen{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    img{
+        width: 50%;
+    }
+}
+
+
+.section_wrap{
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-direction:row;
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.section_half ,.section_large{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img{
+        padding-bottom: 10px;
+    }
+    ul{
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgb(100, 100, 100);
+        background-color: rgb(255, 255, 255);
+        padding:5px;
+        li{
+            border-bottom: 1px dotted rgb(100, 100, 100);
+            padding:4px 0;
+            font-size: 13px;
+        }
+        li:before {
+            // content: "\f004";
+            font-family: FontAwesome;
+            content: "\f1b0";/*アイコン種類*/
+            left : 1em; /*左端からのアイコンまで*/
+            right : 1em; /*左端からのアイコンまで*/
+            color: #ff938b; /*アイコン色*/
+        }
+    }
+}
+@media(max-width:751px){
+    .section_wrap{
+        flex-direction:column;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .page-rinen{
+        width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+        img{
+            width: 90%;
+            padding-top: 50px;
+        }
+    }
+}

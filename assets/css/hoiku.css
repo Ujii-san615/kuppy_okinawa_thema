@@ -1,0 +1,153 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.section_01, .section_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.section_01 img, .section_wrap img {
+  width: 300px;
+}
+
+.section_01 .tokucho_img, .section_wrap .tokucho_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section_01 .tokucho_img img, .section_wrap .tokucho_img img {
+  width: 100%;
+}
+
+.section_half {
+  margin: 0 auto !important;
+}
+
+.section_half img {
+  width: 300px;
+}
+
+.page-rinen {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 50px;
+}
+
+.page-rinen img {
+  width: 50%;
+}
+
+.section_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.section_half, .section_large {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section_half img, .section_large img {
+  padding-bottom: 10px;
+}
+
+.section_half ul, .section_large ul {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #646464;
+  background-color: white;
+  padding: 5px;
+}
+
+.section_half ul li, .section_large ul li {
+  border-bottom: 1px dotted #646464;
+  padding: 4px 0;
+  font-size: 13px;
+}
+
+.section_half ul li:before, .section_large ul li:before {
+  font-family: FontAwesome;
+  content: "\f1b0";
+  /*アイコン種類*/
+  left: 1em;
+  /*左端からのアイコンまで*/
+  right: 1em;
+  /*左端からのアイコンまで*/
+  color: #ff938b;
+  /*アイコン色*/
+}
+
+@media (max-width: 751px) {
+  .section_wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .page-rinen {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+  }
+  .page-rinen img {
+    width: 90%;
+    padding-top: 50px;
+  }
+}
+/*# sourceMappingURL=hoiku.css.map */
