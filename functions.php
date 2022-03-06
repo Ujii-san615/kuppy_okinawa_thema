@@ -62,3 +62,6 @@ function Include_my_php($params = array()) {
 }
 
 add_shortcode('myphp', 'Include_my_php');
+
+//本体ギャラリーCSS停止
+add_filter( 'use_default_gallery_style', '__return_false' );

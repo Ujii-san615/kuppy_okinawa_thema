@@ -560,6 +560,7 @@ main{
         width: 45%;
         top: 0;
         margin: 0 20px;
+        padding: 10px;
     }
 }
 
@@ -899,3 +900,45 @@ footer{
   /* -------------------------------------- */
   /*     TOP up end                         */
   /* -------------------------------------- */
+
+  /* -------------------------------------- */
+  /*     園紹介                             */
+  /* -------------------------------------- */
+
+.section_02 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 30px;
+    width: 90%;
+    .class_introduce {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        .introduce_class{
+            width: calc(100%/3);
+            padding: 5px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .section_02 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        .class_introduce {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 5px;
+            .intrroduce_class {
+                width: 100%;
+            }
+        }
+    }
+}
