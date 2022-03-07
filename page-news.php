@@ -2,91 +2,114 @@
 
 <body>
 <main>
-<section>
+    <section>
         <div id="page-title">
             <img src="<?php bloginfo('template_directory'); ?>/images/title_news_main.png" alt="お知らせ">
         </div>
     </section>
-
     <section>
-        <div class="section_01 news_title">
-            <div class="title_small">
-                <img src="<?php bloginfo('template_directory'); ?>/images/title_news_small.png" alt="園からのお便り">
-            </div>
-            <div class="news_wrap">
-                <div class="news_box">
-                    <ul>
-                        <li class="li_box">
-                            <img src="/assets/img/index03.jpg" alt="">
-                            <div class="day">2019.1.1</div>
-                            <div class="label green_label">ラベル</div>
-                            <div class="text">ニュースニュースニュ </div>
-                        </li>
-                        <li class="li_box">
-                            <img src="/assets/img/index03.jpg" alt="">
-                            <div class="day">2019.1.1</div>
-                            <div class="label orange_label">ラベル</div>
-                            <div class="text">ニュースニュースニュースニュース</div>
-                        </li>
-                        <li class="li_box">
-                            <img src="/assets/img/index03.jpg" alt="">
-                            <div class="day">2019.1.1</div>
-                            <div class="label blue_label">ラベル</div>
-                            <div class="text">ニュースニュースニュースニュース</div>
-                        </li>
-                    </ul>
+            <div class="section_01 news_title">
+                <div class="title_small">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/title_news_small.png" alt="園からのお便り">
                 </div>
-                <div class="more_button">
-                    <a href="">もっと見る </a>
-                </div>
-            </div>
-        </div>
-    
-        <div class="section_01 news_title">
-            <div class="title_small">
-                <img src="<?php bloginfo('template_directory'); ?>/images/title_kondate.png" alt="献立表">
-            </div>
-            <div class="news_wrap">
-                <div class="news_box">
-                    <ul>
-                        <li class="li_box">
-                            <img src="/assets/img/index03.jpg" alt="">
-                            <div class="day">2019.1.1</div>
-                            <div class="label green_label">ラベル</div>
-                            <div class="text">ニュースニュースニュ </div>
-                        </li>
-                        <li class="li_box">
-                            <img src="/assets/img/index03.jpg" alt="">
-                            <div class="day">2019.1.1</div>
-                            <div class="label orange_label">ラベル</div>
-                            <div class="text">ニュースニュースニュースニュース</div>
-                        </li>
-                        <li class="li_box">
-                            <img src="/assets/img/index03.jpg" alt="">
-                            <div class="day">2019.1.1</div>
-                            <div class="label blue_label">ラベル</div>
-                            <div class="text">ニュースニュースニュースニュース</div>
-                        </li>
-                        <li class="li_box">
-                            <img src="/assets/img/index03.jpg" alt="">
-                            <div class="day">2019.1.1</div>
-                            <div class="label blue_label">ラベル</div>
-                            <div class="text">ニュースニュースニュースニュース</div>
-                        </li>
-                        <li class="li_box">
-                            <img src="/assets/img/index03.jpg" alt="">
-                            <div class="day">2019.1.1</div>
-                            <div class="label blue_label">ラベル</div>
-                            <div class="text">ニュースニュースニュースニュース</div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="more_button">
-                    <a href="">もっと見る </a>
+                <div class="news_wrap">
+                    <div class="news_box">
+                        <ul>
+                        <?php
+                            global $post;
+                            $tmp_post = $post; // このPHPコードを実行する前の記事データを退避。
+                            $category_slugs = array(
+                                'schedule',
+                            ); // カテゴリスラッグを配列で指定。
+                            $category_ids = array();
+                            foreach ( $category_slugs as $category_slug ) {
+                                $idObj = get_category_by_slug( $category_slug ); // 指定したカテゴリスラッグから、get_category_by_slug 関数でカテゴリIDを取得。
+                                $category_id = $idObj->term_id;
+                                array_push( $category_ids, $category_id ); // カテゴリIDを配列に格納。
+                            }
+                            $numberposts = '10'; // 取得する最大投稿記事数を指定。
+                            foreach ( $category_ids as $category_id ) { // 指定したカテゴリスラッグの数だけ繰り返す。
+                        ?>
+
+                        <?php
+                            $postslist = get_posts( "category=$category_id&numberposts=$numberposts&order=DESC&orderby=date" );
+                            // get_posts 関数で、投稿記事データを取得し、配列に格納
+                            foreach ( $postslist as $post ) {
+                            // 取得した投稿記事データを1つづつ表示
+                        ?>
+                            <li class="li_box">
+                                <div class="thumbnail"><a href="<?php echo get_permalink(); ?>"><img src="<?php the_post_thumbnail_url() ?>" alt=""></div>
+                                <div class="day"><?php the_time('Y年n月j日'); ?>&nbsp;&nbsp;</div>
+                                <div class="lavel"><?php echo '<span class="entry-label" style="' . esc_attr( 'background:' . $this_category_color ) . ';">' . esc_html( $this_category_name ) . '</span>'; ?></div>
+                                <div class="text"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>
+                            </li>
+                            <?php
+                                    }
+                            ?>
+                                    
+                            <?php
+                                }
+                                $post = $tmp_post; // このPHPコードを実行する前の記事データを復活。
+                            ?>
+                        </ul>
+                    </div>
+                    <div class="more_button">
+                        <a href="">もっと見る </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <section>
+            <div class="section_01 news_title">
+                <div class="title_small">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/title_kondate.png" alt="献立表">
+                </div>
+                <div class="news_wrap">
+                    <div class="news_box">
+                        <ul>
+                        <?php
+                            global $post;
+                            $tmp_post = $post; // このPHPコードを実行する前の記事データを退避。
+                            $category_slugs = array(
+                                'kondate',
+                            ); // カテゴリスラッグを配列で指定。
+                            $category_ids = array();
+                            foreach ( $category_slugs as $category_slug ) {
+                                $idObj = get_category_by_slug( $category_slug ); // 指定したカテゴリスラッグから、get_category_by_slug 関数でカテゴリIDを取得。
+                                $category_id = $idObj->term_id;
+                                array_push( $category_ids, $category_id ); // カテゴリIDを配列に格納。
+                            }
+                            $numberposts = '10'; // 取得する最大投稿記事数を指定。
+                            foreach ( $category_ids as $category_id ) { // 指定したカテゴリスラッグの数だけ繰り返す。
+                        ?>
+
+                        <?php
+                            $postslist = get_posts( "category=$category_id&numberposts=$numberposts&order=DESC&orderby=date" );
+                            // get_posts 関数で、投稿記事データを取得し、配列に格納
+                            foreach ( $postslist as $post ) {
+                            // 取得した投稿記事データを1つづつ表示
+                        ?>
+                            <li class="li_box">
+                                <div class="thumbnail"><a href="<?php echo get_permalink(); ?>"><img src="<?php the_post_thumbnail_url() ?>" alt=""></div>
+                                <div class="day"><?php the_time('Y年n月j日'); ?>&nbsp;&nbsp;</div>
+                                <div class="lavel"><?php echo '<span class="entry-label" style="' . esc_attr( 'background:' . $this_category_color ) . ';">' . esc_html( $this_category_name ) . '</span>'; ?></div>
+                                <div class="text"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>
+                            </li>
+                                    <?php
+                                            }
+                                    ?>
+                                    
+                                    <?php
+                                        }
+                                        $post = $tmp_post; // このPHPコードを実行する前の記事データを復活。
+                                    ?>
+                        </ul>
+                    </div>
+                    <div class="more_button">
+                        <a href="">もっと見る </a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        </section>
 
 
         <section>
@@ -266,10 +289,7 @@
                                         <th>賞与</th>
                                         <td class="td_left">あり（年2回）</td>
                                     </tr>
-                                    <!-- <tr>
-                                        <th>別途徴収金</th>
-                                        <td class="td_left">給食費4,500円</td>
-                                    </tr> -->
+                                
                                     <tr>
                                         <th>福利厚生	</th>
                                         <td class="td_left">
@@ -293,7 +313,7 @@
                 </div>
 
                 <div class="more_button">
-                    <a href="">園の紹介をもっと見る </a>
+                    <a href="<?php echo get_permalink( get_page_by_path( 'introduce' )->ID ); ?>">園の紹介をもっと見る </a>
                 </div>
             </div>
         </section>

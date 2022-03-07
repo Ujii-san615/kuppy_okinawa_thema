@@ -65,3 +65,73 @@ add_shortcode('myphp', 'Include_my_php');
 
 //本体ギャラリーCSS停止
 add_filter( 'use_default_gallery_style', '__return_false' );
+
+
+//カスタム投稿の追加
+function add_custom_post() {
+  register_post_type(
+    'infopage',
+    array(
+      'label' => 'お知らせ',
+      'public' => true,
+      'has_archive' => true,
+      'menu_position' => 5,
+      'supports' => array(
+                      'title',
+                      'editor',
+                      'thumbnail',
+                      'revisions',
+                      'excerpt',
+                      'custom-fields',
+                      )
+    )
+  );
+
+  //複数追加する場合は、register_post_type(～)の内容をここに追加
+
+  //カテゴリを投稿と共通設定にする
+  //register_taxonomy_for_object_type('category', 'infopage');
+  //タグを投稿と共通設定にする
+  //register_taxonomy_for_object_type('post_tag', 'infopage');
+
+}
+add_action('init', 'add_custom_post');
+
+//カスタムタクソノミー
+function add_taxonomy() {
+  //カスタムタクソノミー（お知らせカテゴリ）
+  register_taxonomy(
+  'info-cat',
+  'infopage',
+  array(
+    'label' => 'お知らせカテゴリ',
+    'singular_label' => 'お知らせカテゴリ',
+    'labels' => array(
+      'all_items' => 'お知らせカテゴリ一覧',
+      'add_new_item' => 'お知らせカテゴリを追加'
+    ),
+    'public' => true,
+    'show_ui' => true,
+    'show_in_nav_menus' => true,
+    'hierarchical' => true
+    )
+  );
+
+  //カスタムタクソノミー（お知らせタグ）
+  register_taxonomy(
+  'info-tag',
+  'infopage',
+  array(
+    'label' => 'お知らせのタグ',
+    'singular_label' => 'お知らせのタグ',
+    'labels' => array(
+      'add_new_item' => 'お知らせのタグを追加'
+    ),
+    'public' => true,
+    'show_ui' => true,
+    'show_in_nav_menus' => true,
+    'hierarchical' => false
+    )
+  );
+}
+add_action( 'init', 'add_taxonomy' );

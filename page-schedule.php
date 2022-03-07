@@ -155,20 +155,22 @@
                 <div class="download_pdf">
                     <ul>
                         <li>
-                            <a href="/pages/pdf_box/touen01.pdf" download="/pages/pdf_box/touen01.pdf" class="btn btn-c btn--yellow btn--cubic">
+                            <a href="/wp-content/uploads/2022/03/touen01.pdf" download="/wp-content/uploads/2022/03/touen01.pdf" class="btn btn-c btn--yellow btn--cubic">
                                 登園許可届、病名一覧表をダウンロード<i class="fa far fa-file-alt"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="/pages/pdf_box/touen02.pdf" download="/pages/pdf_box/touen02.pdf" class="btn btn-c btn--yellow btn--cubic">
+                            <a href="/wp-content/uploads/2022/03/touen02.pdf" download="/wp-content/uploads/2022/03/touen02.pdf" class="btn btn-c btn--yellow btn--cubic">
                                 登園許可届（医師記入用）をダウンロード<i class="fa far fa-file-alt"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="/pages/pdf_box/touen03.pdf" download="/pages/pdf_box/touen03.pdf" class="btn btn-c btn--yellow btn--cubic">
+                            <a href="wp-content/uploads/2022/03/touen03.pdf" download="wp-content/uploads/2022/03/touen03.pdf" class="btn btn-c btn--yellow btn--cubic">
                                 登園許可届（保護者記入用）をダウンロード<i class="fa far fa-file-alt"></i>
                             </a>
                         </li>
+                        <a href="<?php echo get_permalink( get_page_by_path( 'introduce' )->ID ); ?>">園の紹介をもっと見る </a>
+
                     </ul>
                 </div>
             </div>

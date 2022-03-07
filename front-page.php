@@ -1,4 +1,3 @@
-<?php include ( dirname(__FILE__) . '/header.php' ); ?>
 
 <main>
         <!-- slider -->        
@@ -216,5 +215,3 @@
         </section>
 
     </main>
-    <?php wp_footer(); ?>
-    <?php include ( dirname(__FILE__) . '/footer.php' ); ?>

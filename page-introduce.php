@@ -143,7 +143,7 @@
             <h1 class="title_01">
                 <img src="<?php bloginfo('template_directory'); ?>/images/title_class.png" alt="クラス紹介">
             </h1>
-            <div class="class_introduce">
+            <div class="introduce_wrap">
                 <img class="introduce_class" src="<?php bloginfo('template_directory'); ?>/images/stage1.png" alt="ひよこ組さん">
                 <img class="introduce_class" src="<?php bloginfo('template_directory'); ?>/images/stage2.png" alt="リス組さん">
                 <img class="introduce_class" src="<?php bloginfo('template_directory'); ?>/images/stage3.png" alt="うさぎ組さん">

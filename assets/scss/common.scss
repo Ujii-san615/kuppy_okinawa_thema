@@ -807,12 +807,14 @@ footer{
 
 /* -------------------------------------- */
 /*     TOP up                              */
+/* -------------------------------------- */
+
 /*リンクを右下に固定*/
 #page-top {
     position: fixed;
-    right: 10px;
+    right: 100px;
     bottom: 160px;
-    z-index: 50;
+    z-index: 90;
     /*はじめは非表示*/
     // opacity: 0;
     -webkit-transform: translateX(100px);
@@ -890,7 +892,8 @@ footer{
     /* ------- top up レスポンシブ ------------ */
     @media screen and (min-width: 767px) {
         #page-top {
-        bottom: 300px;
+        width: 100px;
+        bottom: 100px;
         }
         #page-top a img {
         width: 90px;
@@ -912,13 +915,13 @@ footer{
     flex-direction: column;
     margin: 0 30px;
     width: 90%;
-    .class_introduce {
+    .introduce_wrap {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
         .introduce_class{
-            width: calc(100%/3);
+            width: calc(100%/3) !important;
             padding: 5px;
         }
     }
@@ -930,13 +933,13 @@ footer{
         align-items: center;
         flex-direction: column;
         margin: 0 auto;
-        .class_introduce {
+        .introduce_wrap {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin: 0 5px;
-            .intrroduce_class {
+            .introduce_class {
                 width: 100%;
             }
         }

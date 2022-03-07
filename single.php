@@ -1,26 +1,76 @@
-<?php // ブログ記事を表示する start ?>
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-    <?php // タイトルを表示する start ?>
-    <h1 class="blog-detail__title"><?php the_title(); ?></h1>
-    <?php // タイトルを表示する end ?>
-
-    <?php // アイキャッチ画像を表示する start ?>
-    <?php if(has_post_thumbnail()): ?>
-    <div class="blog-detail__image">
-        <img src="<?php the_post_thumbnail_url('large'); ?>">
+<?php get_header(); ?>
+    <div class="container">
+    <!--パンくずリスト-->
+    <div class="bread">
+        <ol>
+        <li>
+            <a href="<?php echo home_url(); ?>">
+            <i class="fa fa-home"></i><span>TOP</span>
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo get_post_type_archive_link($post_type); ?>">
+            <?php echo esc_html(get_post_type_object(get_post_type())->label); ?>
+            </a>
+        </li>
+        <?php
+        //カスタム投稿に親子関係を持たせるときのみ記述
+        foreach (array_reverse(get_post_ancestors($post->ID)) as $parentid) {
+            echo '<li><a href="',get_the_permalink($parentid),'">'.get_the_title($parentid).'</a></li>';
+        }
+        ?>
+        <li>
+            <a>
+            <?php the_title(); ?>
+            </a>
+        </li>
+        </ol>
     </div>
-    <?php endif; ?>
-    <?php // アイキャッチ画像を表示する end ?>
+    <div class="contents">
+        <?php if(have_posts()): the_post(); ?>
+        <article <?php post_class( 'kiji' ); ?>>
+        <!--投稿日・著者を表示-->
+        <div class="kiji-info">
+            <!--投稿日を取得-->
+            <span class="kiji-date">
+            <i class="fas fa-pencil-alt"></i>
+            <time
+            datetime="<?php echo get_the_date( 'Y-m-d' ); ?>">
+            <?php echo get_the_date(); ?>
+            </time>
+            </span>
+            <!--お知らせカテゴリを追加-->
+            <?php
+            if(has_term('','info-cat',$post->ID)) {
+            echo get_the_term_list($post->ID,'info-cat','<span class="cat-data">','</span><span class="cat-data">','</span>');
+            }
+            ?>
+        </div>
+        <!--タイトル-->
+        <h1><?php the_title(); ?></h1>
+        <!--アイキャッチ取得-->
+        <?php if( has_post_thumbnail() ): ?>
+        <div class="kiji-img">
+            <?php the_post_thumbnail( 'large' ); ?>
+        </div>
+        <?php endif; ?>
+        <!--本文取得-->
+        <?php the_content(); ?>
+        <!--お知らせタグを追加-->
+        <?php
+        if(has_term('','info-tag',$post->ID)) {
+            the_terms($post->ID, 'info-tag','<div class="kiji-tag"><ul><li>タグ： </li><li>','</li><li>','</li></ul></div>'
+            );
+        }
+        ?>
+        </article>
+        <?php endif; ?>
 
-    <?php // 本文を表示する start ?>
-    <div class="blog-detail__body">
-        <div class="blog-content"><?php echo the_content(); ?></div>
     </div>
-    <?php // 本文を表示する end ?>
-
-<?php endwhile; endif; ?>
-<?php // ブログ記事を表示する end ?>
+    <?php get_sidebar(); ?>
+</div>
+<?php get_footer(); ?>
+​
 
 <?php
 if ( have_posts() ) :
@@ -37,3 +87,4 @@ if ( have_posts() ) :
 endwhile;
 endif;
 ?>
+

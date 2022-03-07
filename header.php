@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/hoiku.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/news.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/schedule.css">
+    <?php if ( is_page('album') ): ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/album.css">
+    <?php endif; ?>
     <title>クッピー乳児園 TOPページ</title>
     <?php wp_head(); ?>
 </head>
