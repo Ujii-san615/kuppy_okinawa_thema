@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+body {
+  background-color: #ff4343;
+  font-family: "Meiryo UI", "Hiragino Maru Gothic ProN","MS Pゴシック","Hiragino Sans",sans-serif;
+}
+
+.container_news_single .breadcrumbs {
+  font-size: 10px;
+}
+
+.contents_news {
+  width: 90%;
+}
+
+body {
+  width: 90%;
+}
+
+p {
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+.kiji-info .kiji-date {
+  font-size: 13px;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.333em;
+  margin: 5px 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.4em;
+  font-weight: bold;
+  margin-bottom: 0.375em;
+  margin-left: 10px;
+}
+
+h3 {
+  font-size: 1.125em;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

@@ -11,7 +11,7 @@
         <section>
         <div class="section_03">
             <div class="title_01"><h1>
-                <img src="<?php bloginfo('template_directory'); ?>/images/title_en.png" alt="園について">
+                <img src="<?php bloginfo('template_directory'); ?>/images/title_weare.png" alt="私たちについて">
                 </h1>
             </div>
             <div class="we_box">

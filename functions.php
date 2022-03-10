@@ -1,4 +1,16 @@
 <?php
+add_theme_support( 'menus' );
+
+//タイトル出力
+function wpbeg_title( $title ) {
+  if ( is_front_page() && is_home() ) { //トップページなら
+      $title = get_bloginfo( 'name', 'display' );
+  } elseif ( is_singular() ) { //シングルページなら
+      $title = single_post_title( '', false );
+  }
+  return $title;
+}
+add_filter( 'pre_get_document_title', 'wpbeg_title' );
 
 // style.cssを読み込む
 function read_enqueue_styles() {
@@ -9,6 +21,8 @@ add_action( 'wp_enqueue_scripts', 'read_enqueue_styles' );
 // ↓ ここから追記
 // rel="prev"とrel=“next"表示の削除
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
+
+
 
 // WordPressバージョン表示の削除
 remove_action('wp_head', 'wp_generator');
@@ -27,12 +41,16 @@ register_nav_menu( 'header-navi', 'ヘッダーナビ' );
 * CSS / JavaScriptの読み込み
 * -------------------------------------- */
 function my_script_init() {
-wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css' );
-wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/common.css' );
-wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/schedule.css' );
-wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/hoiku.css' );
-wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/news.css' );
-wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/schedule.css' );
+wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css');
+wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/reset.css');
+wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/common.css');
+wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/schedule.css');
+wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/hoiku.css');
+wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/news.css');
+wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/schedule.css');
+wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/slick.css');
+wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/slick-theme.css');
+
 }
 add_action( 'wp_enqueue_scripts', 'my_script_init' );
 
@@ -41,7 +59,8 @@ function add_files() {
 }
 add_action( 'wp_enqueue_scripts', 'add_files' );
 
-
+//ビジュアルエディタ用スタイル適用
+add_editor_style('editor-style.css');
 
 // imagesフォルダの構文短縮
 function imagepassshort($arg) {
@@ -135,3 +154,10 @@ function add_taxonomy() {
   );
 }
 add_action( 'init', 'add_taxonomy' );
+
+  //editor-style.css
+
+function wpbeg_theme_add_editor_styles() {
+  add_editor_style( get_template_directory_uri() . "/assets/css/editor-style.css" );
+}
+add_action( 'admin_init', 'wpbeg_theme_add_editor_styles' );

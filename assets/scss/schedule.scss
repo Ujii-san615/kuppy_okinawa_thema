@@ -169,48 +169,55 @@
     margin-top: 50px;
 }
 .toen_text{
-    margin-bottom: 30px;
     align-items: center;
     text-align: center;
+    .yellow_line{
+        border-bottom: solid 3px #ffb813;
+    }
 }
     .section_toen{
-        margin: 50px;
+        margin: 30px;
     }
     .download_pdf{
-        margin:50px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:30px 0px;
         width: 100%;
         ul{
-            padding:0 70px;
+            padding:0 20px;
             li{
-                padding-right: 30px;
                 margin-bottom: 10px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                width: 400px;
                 a.btn--yellow {
-                    color: #1c116c;
-                    background-color: #98f6ff;
+                    color: #472b1d;
+                    background-color: #ffdb88;
                     width: 90%;
                     text-align: center;
                     font-weight: bold;
                 }
                     
                 a.btn--yellow:hover {
-                    color: #000;
-                    background: #98f6ff;
+                    color: #472b1d;
+                    font-weight: bold;
+                    background: #ffdb88;
                 }
                     
                 a.btn--yellow.btn--cubic {
-                    border-bottom: 5px solid #699bb5;
+                    border-bottom: 5px solid #ffb300;
                 }
                     
                 a.btn--yellow.btn--cubic:hover {
                     margin-top: 3px;
-                    border-bottom: 2px solid #699bb5;
+                    border-bottom: 2px solid #ffb300;
                 }
                     
                 a.btn-c {
-                    font-size: 0.7rem;
+                    font-size: 1rem;
+                    font-size: 15px;
                     position: relative;
                     padding: 0.5rem 1rem 0.5rem 1rem;
                     border-radius: 100vh;
@@ -222,6 +229,20 @@
             }
         }
     }
+/*    schedule  SP                       */
+
+@media(max-width:750px){
+    .section_toen{
+        .download_pdf{
+            ul{
+                li{
+                    padding-right: 30px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
 /* -------------------------------------- */
 /*    schedule  end                       */
 /* -------------------------------------- */

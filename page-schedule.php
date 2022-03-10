@@ -145,17 +145,17 @@
         </div>
         <div class="section_03">
                 <div class="section_toen">
-                    <p class="toen_text">保育所は集団で生活しているため、感染症の児童が登園してしまうと容易に園全体の子供達に感染してしまう恐れがあります。<br><br>
-                        こうしたことが起きないように、<span class="yellow_line">感染症にかかった子供は医療機関を受診</span>し、伝染の恐れがない程度に回復したことを医師に証明してもらう必要があります。<br><br>
-                        厚労省の感染症ガイドラインの登園届には、<span class="yellow_line">「医師が記入するもの」</span>と、<span class="yellow_line">「保護者が記入するもの」</span>の２種類があります。<br><br>
-                        感染力が強く重症化しやすい感染症の場合は「医師が記入するもの」を使い、それ以外の感染症については「保護者が記入するもの」を使用します。<br><br>
+                    <p class="toen_text">保育所は集団で生活しているため、感染症の児童が登園してしまうと容易に<br>園全体の子供達に感染してしまう恐れがあります。<br><br>
+                        こうしたことが起きないように、<span class="yellow_line">感染症にかかった子供は医療機関を受診</span>し、<br>伝染の恐れがない程度に回復したことを医師に証明してもらう必要があります。<br><br>
+                        厚労省の感染症ガイドラインの登園届には、<span class="yellow_line">「医師が記入するもの」</span>と、<br><span class="yellow_line">「保護者が記入するもの」</span>の２種類があります。<br><br>
+                        感染力が強く重症化しやすい感染症の場合は<span class="yellow_line">「医師が記入するもの」</span>を使い、<br>それ以外の感染症については<span class="yellow_line">「保護者が記入するもの」</span>を使用します。<br><br>
                         下記の感染症にかかった場合は、そぞれ必要な登園許可届を提出して下さい。<br>
                         提出に必要な書類は以下よりダウンロードしご利用ください。</p>
                 </div>
                 <div class="download_pdf">
                     <ul>
                         <li>
-                            <a href="/wp-content/uploads/2022/03/touen01.pdf" download="/wp-content/uploads/2022/03/touen01.pdf" class="btn btn-c btn--yellow btn--cubic">
+                            <a href="/wp-content/uploads/2022/03/touen02.pdf" download="/wp-content/uploads/2022/03/touen01.pdf" class="btn btn-c btn--yellow btn--cubic">
                                 登園許可届、病名一覧表をダウンロード<i class="fa far fa-file-alt"></i>
                             </a>
                         </li>
@@ -169,9 +169,15 @@
                                 登園許可届（保護者記入用）をダウンロード<i class="fa far fa-file-alt"></i>
                             </a>
                         </li>
-                        <a href="<?php echo get_permalink( get_page_by_path( 'introduce' )->ID ); ?>">園の紹介をもっと見る </a>
-
                     </ul>
+
+                    <?php session_start(); ?>　　
+                    <form action="kuppy_okinawa/wp-content/uploads/2022/03/touen03.pdf" method='post' name='formName'>
+                        <input name="dlfile" type="hidden" value="<?php echo htmlspecialchars('/wp-content/uploads/2022/03/touen03.pdf',ENT_COMPAT,'UTF-8'); ?>" />
+                        <input name="token"  type="hidden" value="<?php echo htmlspecialchars(session_id()       ,ENT_COMPAT,'UTF-8'); ?>" />
+                    </form>
+
+                    <a href="javascript:void(0)" onclick='document.formName.submit();return false;' >クイックダウンロード</a>
                 </div>
             </div>
         </div>

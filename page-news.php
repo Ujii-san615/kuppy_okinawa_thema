@@ -27,7 +27,7 @@
                                 $category_id = $idObj->term_id;
                                 array_push( $category_ids, $category_id ); // カテゴリIDを配列に格納。
                             }
-                            $numberposts = '10'; // 取得する最大投稿記事数を指定。
+                            $numberposts = '4'; // 取得する最大投稿記事数を指定。
                             foreach ( $category_ids as $category_id ) { // 指定したカテゴリスラッグの数だけ繰り返す。
                         ?>
 
@@ -37,12 +37,17 @@
                             foreach ( $postslist as $post ) {
                             // 取得した投稿記事データを1つづつ表示
                         ?>
-                            <li class="li_box">
-                                <div class="thumbnail"><a href="<?php echo get_permalink(); ?>"><img src="<?php the_post_thumbnail_url() ?>" alt=""></div>
-                                <div class="day"><?php the_time('Y年n月j日'); ?>&nbsp;&nbsp;</div>
-                                <div class="lavel"><?php echo '<span class="entry-label" style="' . esc_attr( 'background:' . $this_category_color ) . ';">' . esc_html( $this_category_name ) . '</span>'; ?></div>
-                                <div class="text"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>
-                            </li>
+
+                            <a href="<?php echo get_permalink(); ?>">
+                                <li class="li_box">
+                                    <div class="thumbnail"><img src="<?php the_post_thumbnail_url() ?>" alt=""></div>
+                                    <div class="li_text_box">
+                                        <div class="day"><?php the_time('Y年n月j日'); ?>&nbsp;&nbsp;</div>
+                                        <div class="lavel"><?php echo '<span class="entry-label" style="' . esc_attr( 'background:' . $this_category_color ) . ';">' . esc_html( $this_category_name ) . '</span>'; ?></div>
+                                        <div class="text"><?php the_title(); ?></div>
+                                    </div>
+                                </li>
+                            </a>
                             <?php
                                     }
                             ?>
@@ -53,9 +58,9 @@
                             ?>
                         </ul>
                     </div>
-                    <div class="more_button">
+                    <!-- <div class="more_button">
                         <a href="">もっと見る </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="section_01 news_title">
@@ -87,12 +92,16 @@
                             foreach ( $postslist as $post ) {
                             // 取得した投稿記事データを1つづつ表示
                         ?>
-                            <li class="li_box">
-                                <div class="thumbnail"><a href="<?php echo get_permalink(); ?>"><img src="<?php the_post_thumbnail_url() ?>" alt=""></div>
-                                <div class="day"><?php the_time('Y年n月j日'); ?>&nbsp;&nbsp;</div>
-                                <div class="lavel"><?php echo '<span class="entry-label" style="' . esc_attr( 'background:' . $this_category_color ) . ';">' . esc_html( $this_category_name ) . '</span>'; ?></div>
-                                <div class="text"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>
-                            </li>
+                            <a href="<?php echo get_permalink(); ?>">
+                                <li class="li_box">
+                                    <div class="thumbnail"><img src="<?php the_post_thumbnail_url() ?>" alt=""></div>
+                                    <div class="li_text_box">
+                                        <div class="day"><?php the_time('Y年n月j日'); ?>&nbsp;&nbsp;</div>
+                                        <div class="lavel"><?php echo '<span class="entry-label" style="' . esc_attr( 'background:' . $this_category_color ) . ';">' . esc_html( $this_category_name ) . '</span>'; ?></div>
+                                        <div class="text"><?php the_title(); ?></div>
+                                    </div>
+                                </li>
+                            </a>
                                     <?php
                                             }
                                     ?>
@@ -103,9 +112,9 @@
                                     ?>
                         </ul>
                     </div>
-                    <div class="more_button">
+                    <!-- <div class="more_button">
                         <a href="">もっと見る </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div> 

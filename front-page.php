@@ -1,3 +1,5 @@
+<?php include ( dirname(__FILE__) . '/header.php' ); ?>
+<?php wp_header(); ?>
 
 <main>
         <!-- slider -->        
@@ -20,8 +22,7 @@
                             global $post;
                             $tmp_post = $post; // このPHPコードを実行する前の記事データを退避。
                             $category_slugs = array(
-                                'schedule',
-                                'konadate',
+                                'infomation',
                             );
                             // カテゴリスラッグを配列で指定。
                             $this_categories = get_the_category();
@@ -37,19 +38,20 @@
                             }
                             $numberposts = '4'; // 取得する最大投稿記事数を指定。
                             foreach ( $category_ids as $category_id ) { // 指定したカテゴリスラッグの数だけ繰り返す。
-                        ?>
-
-                        <?php
+                        
                             $postslist = get_posts( "category=$category_id&numberposts=$numberposts&order=DESC&orderby=date" );
                             // get_posts 関数で、投稿記事データを取得し、配列に格納
                             foreach ( $postslist as $post ) {
                             // 取得した投稿記事データを1つづつ表示
                         ?>
-                            <li class="li_box">
-                                <div class="day"><?php the_time('Y年n月j日'); ?>&nbsp;&nbsp;</div>
-                                <div class="lavel"><?php echo '<span class="entry-label" style="' . esc_attr( 'background:' . $this_category_color ) . ';">' . esc_html( $this_category_name ) . '</span>'; ?></div>
-                                <div class="text"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>
-                            </li>
+
+                            <a href="<?php echo get_permalink(); ?>">
+                                <li class="li_box">
+                                    <div class="day"><?php the_time('Y/n/j'); ?>&nbsp;&nbsp;</div>
+                                    <div class="lavel"><?php echo '<span class="entry-label" style="' . esc_attr( 'background:' . $this_category_color ) . ';">' . esc_html( $this_category_name ) . '</span>'; ?></div>
+                                    <div class="text"><?php the_title(); ?></div>
+                                </li>
+                            </a>
                             <?php
                                     }
                             ?>
@@ -211,7 +213,9 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28624.863267331!2d127.757005!3d26.258161!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfdf388e35d023df7!2z44Kv44OD44OU44O85Lmz5YWQ5ZyS!5e0!3m2!1sja!2sjp!4v1637250734732!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                </div>
                     </div>
                 </div>
-            </div>
         </section>
-
     </main>
+    <?php wp_footer(); ?>
+    <?php include ( dirname(__FILE__) . '/footer.php' ); ?>
+
+
