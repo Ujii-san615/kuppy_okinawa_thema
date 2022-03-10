@@ -1,4 +1,17 @@
 
+<?php
+
+/*
+
+Template Name: 保育内容
+Template Post Type: page,post
+
+*/
+
+?>
+<?php include ( dirname(__FILE__) . '/header.php' ); ?>
+
+
 <body>
 <main>
 <section>
@@ -68,3 +81,4 @@
     </section>
 <!--recrut-->
 </main>
+<?php include ( dirname(__FILE__) . '/footer.php' ); ?>

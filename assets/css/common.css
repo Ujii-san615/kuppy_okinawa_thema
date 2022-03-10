@@ -9,20 +9,12 @@ a {
 }
 
 body {
-  background-color: #ffeded;
+  background-color: #fff4ed;
   font-family: "Meiryo UI", "Hiragino Maru Gothic ProN","MS Pゴシック","Hiragino Sans",sans-serif;
 }
 
 a:link, a:visited, a:active {
   color: #1e140e;
-}
-
-h1, h2, h3, h4, p, a, li, td {
-  color: #1e140e;
-}
-
-tbody, table {
-  border-color: #fe0000;
 }
 
 @media (min-width: 751px) {
@@ -143,7 +135,7 @@ header {
   margin: 0 auto 0px;
   width: 100%;
   font-size: 90%;
-  background: darkgreen;
+  background: #136715;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,7 +145,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 18;
+  z-index: 20;
 }
 
 .nav_menu .g-nav-list li {
@@ -179,7 +171,7 @@ header {
 }
 
 .nav_menu .g-nav-list li a:hover {
-  background: darkgreen;
+  background: #666;
 }
 
 .nav_menu .g-nav-list li .fa {
@@ -200,14 +192,14 @@ header {
 .hamburger {
   display: block;
   position: fixed;
-  z-index: 30;
+  z-index: 3;
   right: 3px;
-  top: 20px;
+  top: 10px;
   width: 50px;
   height: 50px;
   cursor: pointer;
   text-align: center;
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 30%;
 }
 
@@ -217,7 +209,7 @@ header {
   width: 30px;
   height: 2px;
   left: 9px;
-  background: darkgreen;
+  background: #656565;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
@@ -238,7 +230,7 @@ header {
 .hamburger.active span:nth-child(1) {
   top: 22px;
   left: 9px;
-  background: darkgreen;
+  background: #656565;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
@@ -246,7 +238,7 @@ header {
 .hamburger.active span:nth-child(2),
 .hamburger.active span:nth-child(3) {
   top: 22px;
-  background: darkgreen;
+  background: #656565;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
@@ -254,11 +246,11 @@ header {
 /* メニュー背景　*/
 nav.globalMenuSp {
   position: fixed;
-  z-index: 18;
+  z-index: 2;
   top: 0;
   left: 0;
-  color: #989898;
-  background: #2c782def;
+  color: #fff;
+  background: rgba(71, 70, 73, 0.6);
   text-align: center;
   width: 100%;
   -webkit-transform: translateX(100%);
@@ -279,7 +271,6 @@ nav.globalMenuSp ul li {
   width: 100%;
   -webkit-transition: .4s all;
   transition: .4s all;
-  border-bottom: solid 1px #ffff;
 }
 
 nav.globalMenuSp ul li:last-child {
@@ -356,9 +347,6 @@ nav.globalMenuSp.active {
   }
   .header .header_back .header_logo img {
     width: 300px;
-  }
-  .fa {
-    margin: 0 5px;
   }
 }
 
@@ -516,7 +504,7 @@ main {
 .omoi_box .omoi_photo {
   padding-bottom: 50px;
   margin-right: 10px;
-  z-index: 5;
+  z-index: 10;
 }
 
 .omoi_box .omoi_photo img {
@@ -527,7 +515,7 @@ main {
 }
 
 .omoi_box .omoi_main {
-  z-index: 10;
+  z-index: 15;
   position: absolute;
   padding-top: 50px;
   -webkit-box-align: start;
@@ -614,7 +602,7 @@ main {
   .title_01 {
     font-size: 20px;
     margin: 20px auto;
-    color: #44220e;
+    color: #543007;
   }
   .section_text {
     text-align: center;
@@ -648,16 +636,16 @@ main {
 }
 
 .section_table .syousai_table {
-  border: solid 0.2px #2f1e06;
   border-spacing: 0;
   margin: 10px;
+  border: solid 0.5px black;
   font-size: 12px;
   width: 100%;
 }
 
 .section_table .syousai_table tr > th {
   background-color: #167301;
-  border: solid 0.2px #2f1e06;
+  border: solid 0.5px black;
   width: 10vw;
   text-align: center;
   color: white;
@@ -665,7 +653,7 @@ main {
 
 .section_table .syousai_table tr > td {
   background-color: white;
-  border: solid 0.2px #2f1e06;
+  border: solid 0.5px black;
   text-align: center;
   padding: 3px 5px;
 }
@@ -735,7 +723,6 @@ main {
   width: 45%;
   top: 0;
   margin: 0 20px;
-  padding: 10px;
 }
 
 @media (max-width: 750px) {
@@ -762,7 +749,7 @@ main {
 }
 
 .news_table {
-  width: 50%;
+  width: 60%;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -777,41 +764,34 @@ main {
 }
 
 .news_table ul {
-  width: 50%;
+  width: 500px;
 }
 
-.news_table .li_box {
+.news_table li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5px;
+  padding: 15px;
   border-bottom: 1px dotted #646464;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 30px;
 }
 
-.news_table .li_box .day {
-  margin-right: 20px;
-  font-size: 13px;
-  background-color: #ffc50781;
+.news_table .day {
+  font-size: 14px;
 }
 
-.news_table .li_box .lavel {
-  font-size: 10px;
+.news_table .label {
+  border-radius: 3px;
+  color: #fff;
+  padding: 2px 5px;
+  margin: 0 20px;
 }
 
-.news_table .li_box .text {
-  font-size: 13px;
+.news_table .text {
+  font-size: 15px;
 }
 
 .news_table .green_label {
-  background-color: #50b572;
+  background-color: #31864d;
 }
 
 .news_table .orange_label {
@@ -819,20 +799,12 @@ main {
 }
 
 .news_table .blue_label {
-  background-color: #7082a6;
-}
-
-.news_table .entry-label {
-  display: inline-block;
-  border-radius: 3px;
+  background-color: #666f81;
 }
 
 @media (max-width: 750px) {
   .news_table {
-    width: 80%;
-  }
-  .news_table ul {
-    width: 80%;
+    width: 90%;
   }
 }
 
@@ -844,19 +816,13 @@ footer {
   width: 100%;
 }
 
-.footer img {
-  margin-bottom: 0px;
-  width: 100%;
-  margin-top: 50px;
-  vertical-align: bottom;
-}
-
 .footer .footer_wrap {
-  width: 100%;
-  min-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -864,41 +830,34 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  bottom: 0;
   background-color: darkgreen;
+  height: 10vh;
 }
 
 .footer .footer_wrap .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding-top: 10px;
 }
 
 .footer .footer_wrap .contact .address {
-  font-size: 12px;
   color: cornsilk;
-  margin: 0 40px;
+  margin-right: 50px;
 }
 
 .footer .footer_wrap .contact .tel {
-  font-size: 16px;
   color: cornsilk;
-  font-weight: bold;
-  padding-top: 10px;
+  font-size: 1.2em;
 }
 
 .footer .footer_wrap .copylight {
+  width: 100%;
+  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -912,12 +871,27 @@ footer {
 
 .footer .footer_wrap .copylight .copy {
   font-size: 9px;
+  margin: 0 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: cornsilk;
-  padding: 20px 0;
 }
 
-@media screen and (max-width: 767px) {
-  .contact {
+.footer img {
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+}
+
+@media (max-width: 750px) {
+  .footer_wrap .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -926,13 +900,17 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .footer_wrap .contact .address {
+    margin-right: 0px;
+    margin-top: 10px;
+  }
 }
 
 #page-top {
   position: fixed;
   right: 10px;
   bottom: 160px;
-  z-index: 50;
+  z-index: 2;
   /*はじめは非表示*/
   opacity: 0;
 }
@@ -1087,7 +1065,7 @@ footer {
           align-items: center;
   background-color: ivory;
   top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 #page-title img, #second_pagetitle img {
@@ -1101,13 +1079,12 @@ footer {
 
 /* -------------------------------------- */
 /*     TOP up                              */
-/* -------------------------------------- */
 /*リンクを右下に固定*/
 #page-top {
   position: fixed;
-  right: 100px;
+  right: 10px;
   bottom: 160px;
-  z-index: 90;
+  z-index: 50;
   /*はじめは非表示*/
   -webkit-transform: translateX(100px);
   transform: translateX(100px);
@@ -1184,8 +1161,7 @@ footer {
 /* ------- top up レスポンシブ ------------ */
 @media screen and (min-width: 767px) {
   #page-top {
-    width: 100px;
-    bottom: 100px;
+    bottom: 300px;
   }
   #page-top a img {
     width: 90px;
@@ -1198,6 +1174,10 @@ footer {
 /* -------------------------------------- */
 /*     園紹介                             */
 /* -------------------------------------- */
+.section_03 {
+  width: 90%;
+}
+
 .section_02 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1213,10 +1193,9 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 30px;
-  width: 90%;
 }
 
-.section_02 .introduce_wrap {
+.section_02 .class_introduce {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1229,8 +1208,8 @@ footer {
   margin: 0 auto;
 }
 
-.section_02 .introduce_wrap img {
-  width: 30%;
+.section_02 .class_introduce .intrroduce_class {
+  width: calc(100%/3);
   padding: 5px;
 }
 
@@ -1251,7 +1230,7 @@ footer {
             flex-direction: column;
     margin: 0 auto;
   }
-  .section_02 .introduce_wrap {
+  .section_02 .class_introduce {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1267,35 +1246,8 @@ footer {
             flex-direction: column;
     margin: 0 5px;
   }
-  .section_02 .introduce_wrap img {
+  .section_02 .class_introduce .intrroduce_class {
     width: 100%;
   }
-}
-
-/* -------------------------------------- */
-/*     　single.php                       */
-/* -------------------------------------- */
-.container_news_single {
-  width: 90%;
-}
-
-.container_news_single .bread ol {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.container_news_single .bread ol li {
-  font-size: 10px;
 }
 /*# sourceMappingURL=common.css.map */

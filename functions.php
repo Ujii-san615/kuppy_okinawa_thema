@@ -48,9 +48,9 @@ wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/schedule.
 wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/hoiku.css');
 wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/news.css');
 wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/schedule.css');
+wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/album.css');
 wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/slick.css');
 wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/slick-theme.css');
-
 }
 add_action( 'wp_enqueue_scripts', 'my_script_init' );
 

@@ -1,3 +1,13 @@
+<?php
+
+/*
+
+Template Name: 園の紹介
+Template Post Type: page,post
+
+*/
+
+?>
 <?php include ( dirname(__FILE__) . '/header.php' ); ?>
 
 <main>
@@ -10,9 +20,8 @@
 
         <section>
         <div class="section_03">
-            <div class="title_01"><h1>
+            <div class="title_01">
                 <img src="<?php bloginfo('template_directory'); ?>/images/title_weare.png" alt="私たちについて">
-                </h1>
             </div>
             <div class="we_box">
                 <p>クッピー乳児園は、27年3ヵ月、無認可で地域の子どもたちを保育してまいりました。<br>
@@ -25,9 +34,8 @@
     </section>
     <section>
         <div class="section_03">
-            <div class="title_01"><h1>
+            <div class="title_01">
                 <img src="<?php bloginfo('template_directory'); ?>/images/title_gaiyou.png" alt="園の概要">
-            </h1>
             </div>
             <div class="section_table">
                 <h2 class="h2_box">施設詳細</h2>
@@ -82,9 +90,9 @@
 
     <section>
         <div class="section_03">
-            <h1 class="title_01">
+            <div class="title_01">
                 <img src="<?php bloginfo('template_directory'); ?>/images/title_teacher.png" alt="職員構成">
-            </h1>
+            </div>
             <div class="section_table">
                 <h2 class="h2_box">職員構成</h2>
                 <table class="syousai_table">
@@ -140,9 +148,9 @@
 
     <section>
         <div class="section_02">
-            <h1 class="title_01">
+            <div class="title_01">
                 <img src="<?php bloginfo('template_directory'); ?>/images/title_class.png" alt="クラス紹介">
-            </h1>
+            </div>
             <div class="introduce_wrap">
                 <img class="introduce_class" src="<?php bloginfo('template_directory'); ?>/images/stage1.png" alt="ひよこ組さん">
                 <img class="introduce_class" src="<?php bloginfo('template_directory'); ?>/images/stage2.png" alt="リス組さん">

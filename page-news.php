@@ -1,3 +1,14 @@
+<?php
+
+/*
+
+Template Name: ニュース
+Template Post Type: page,post
+
+*/
+
+?>
+
 <?php include ( dirname(__FILE__) . '/header.php' ); ?>
 
 <body>
@@ -151,9 +162,9 @@
             </div>
 
             <div class="section_03">
-                <h1 class="title_01">
+                <div class="title_01">
                     <img class="recruit_pr"  src="<?php bloginfo('template_directory'); ?>/images/title_en.png" alt="園について">
-                </h1>
+                </div>
                 <div class="tabs">
                     <input id="fulltime" type="radio" name="tab_item" checked>
                     <label class="tab_item" for="fulltime">フルタイム</label>

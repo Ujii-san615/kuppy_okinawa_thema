@@ -1,2 +1,7 @@
 03/07/22 5:21:49: common.scss - parse error: failed at `h1,` /Users/chiaki_uj/Desktop/MAMP/kuppy_okinawa/wp-content/themes/kuppi_okinawa/assets/scss/common.scss on line 19, at column 1
 03/07/22 8:39:36: editor-style.scss - parse error: failed at `font-` /Users/chiaki_uj/Desktop/MAMP/kuppy_okinawa/wp-content/themes/kuppi_okinawa/assets/scss/editor-style.scss on line 16, at column 5
+03/10/22 6:35:58: common.scss - parse error: failed at `wi` /Users/chiaki_uj/Desktop/MAMP/kuppy_okinawa/wp-content/themes/kuppi_okinawa/assets/scss/common.scss on line 17, at column 5
+03/10/22 6:57:52: common.scss - parse error: failed at `ju` /Users/chiaki_uj/Desktop/MAMP/kuppy_okinawa/wp-content/themes/kuppi_okinawa/assets/scss/common.scss on line 11, at column 5
+03/10/22 10:57:55: album.scss - parse error: failed at `content: url("wp-content/uploads/2022/03/h1_icon-e1646898887569.png")` /Users/chiaki_uj/Desktop/MAMP/kuppy_okinawa/wp-content/themes/kuppi_okinawa/assets/scss/album.scss on line 42, at column 13
+03/10/22 11:31:24: album.scss - parse error: failed at `justify-content: ;` /Users/chiaki_uj/Desktop/MAMP/kuppy_okinawa/wp-content/themes/kuppi_okinawa/assets/scss/album.scss on line 126, at column 5
+03/10/22 11:47:54: album.scss - parse error: failed at `font-size: ;` /Users/chiaki_uj/Desktop/MAMP/kuppy_okinawa/wp-content/themes/kuppi_okinawa/assets/scss/album.scss on line 158, at column 9
