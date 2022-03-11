@@ -9,7 +9,7 @@
 
 .album_title:before {
   width: 15px;
-  content: url("http://localhost:8888/kuppy_okinawa/wp-content/uploads/2022/03/h1_icon-e1646898887569.png");
+  content: url("http://kuppi-okinawa.babymilk.jp/wp-content/uploads/2022/03/h1_icon-e1646898887569.png");
   margin-right: 10px;
 }
 
@@ -22,13 +22,14 @@
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  font-size: 13px;
+  font-size: 1.2em;
   border-bottom: 1px solid #4e2710;
-  margin: 0 30px;
+  margin: 20px 30px;
 }
 
 .prevpostslink {
   border-bottom: solid 3px #ffc400;
+  font-size: 1.3em;
 }
 
 .wp-block-file {
@@ -149,7 +150,7 @@
 
 #album_nav .album_menu li:before {
   width: 15px;
-  content: url("http://localhost:8888/kuppy_okinawa/wp-content/uploads/2022/03/h1_icon-e1646898887569.png");
+  content: url("http://kuppi-okinawa.babymilk.jp/wp-content/uploads/2022/03/h1_icon-e1646898887569.png");
   margin-right: 10px;
 }
 
@@ -191,11 +192,10 @@
   }
   #album_nav .album_menu li {
     margin: 0 5px;
-    font-size: 1.0em;
+    font-size: 1.2em;
   }
   #album_nav .album_menu li:before {
     width: 15px;
-    content: url("http://localhost:8888/kuppy_okinawa/wp-content/uploads/2022/03/h1_icon-e1646898887569.png");
     margin-right: 10px;
   }
   h2 {

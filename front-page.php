@@ -10,9 +10,9 @@
         <!-- section1 -->
         <section>
             <div class="section_01">
-                <h1 class="title_01">
+                <div class="title_01">
                     <img src="<?php bloginfo('template_directory'); ?>/images/title_news.png" alt="お知らせ">
-                </h1>
+                </div>
 
                 <div id="posts" class="news_table">
                     
@@ -69,9 +69,9 @@
         <!-- section1 -->
         <section>
             <div class="section_01">
-                <h1 class="title_01">
+                <div class="title_01">
                     <img src="<?php bloginfo('template_directory'); ?>/images/title_omoi.png" alt="クッピー乳児園の想い">
-                </h1>
+                </div>
                 <div class="omoi_box">
                     <div class="omoi_photo">
                         <img src="<?php bloginfo('template_directory'); ?>/images/index04.jpg" alt="">
@@ -82,7 +82,7 @@
                 </div>
             </div>
             <div class="more_button">
-                <a href="<?php echo get_permalink( get_page_by_path( 'schedule' )->ID ); ?>">園の生活について</a>
+                <a href="<?php echo get_permalink( get_page_by_path( 'introduce' )->ID ); ?>">園の紹介について</a>
             </div>
         </section>
         <!-- section2 -->
@@ -91,9 +91,9 @@
                 <div class="section_line">
                     <img src="<?php bloginfo('template_directory'); ?>/images/line_flower.png" alt="">
                 </div>
-                <h1 class="title_01">
+                <div class="title_01">
                     <img src="<?php bloginfo('template_directory'); ?>/images/title_syoukibo.png" alt="小規模保育園とは？">
-                </h1>
+                </div>
                 <div class="section_box">
                     <div class="section_square" id="square1">
                         <img src="<?php bloginfo('template_directory'); ?>/images/icon1.png" alt="０〜３歳未満対象">
@@ -101,12 +101,12 @@
                     </div>
                     <div class="section_square" id="square2">
                         <img src="<?php bloginfo('template_directory'); ?>/images/icon2.png" alt="定員数19人以下の小規模保育">
-                        <p class="square">定員数19人以下の<br>
+                        <p class="square">定員数19人以下の
                             小規模保育</p>
                     </div>
                     <div class="section_square" id="square3">
                         <img src="<?php bloginfo('template_directory'); ?>/images/icon3.png" alt="２歳児常クラス卒園後、認可保育園へ進級">
-                        <p class="square">２歳児常クラス卒園後、<br>
+                        <p class="square">２歳児常クラス卒園後、
                             認可保育園へ進級</p>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                     個々の発達に応じた丁寧な保育を行うことができます。</p>
                 
                 <div class="section_small">
-                    <h2>＜連携施設一覧＞</h2>
+                    <div>＜連携施設一覧＞</div>
                     <p class="section_small_text">
                         ①どんぐりの里保育園　②赤道あおぞら保育園　<br>③ポケット保育園　④ぎのわんおひさま保育園
                     </p>
@@ -132,11 +132,11 @@
         <section>
             <div class="section section_wrap">
                 <div class="section_half">
-                    <h1 class="title_01">
+                    <div class="title_01">
                         <img src="<?php bloginfo('template_directory'); ?>/images/title_en.png" alt="園について">
-                    </h1>
+                    </div>
                     <div class="section_table">
-                        <h2 class="h2_box">定員状況</h2>
+                        <div class="h2_box">定員状況</div>
                         <p class="table_text">※現在空きはございません。（８月１日時点）</p>
                         <table class="syousai_table">
                             <tr>
@@ -160,7 +160,7 @@
                         </table>
                     </div>
                     <div class="section_table">
-                        <h2 class="h2_box">保育時間</h2>
+                        <div class="h2_box">保育時間</div>
                         <h3 class="h3_left"><span class="table_subtitle">《通常保育》</span></h3>
                             <table class="syousai_table">
                                 <tr>
@@ -181,7 +181,7 @@
                             </table>
                     </div>
                     <div class="section_table">
-                        <h2 class="h2_box">概要</h2>
+                        <div class="h2_box">概要</div>
                         <table class="syousai_table">
                             <tr>
                                 <th>事業所名</th>
@@ -203,9 +203,9 @@
                     </div>
                 </div>
                 <div class="section_half">
-                    <h1 class="title_01">
+                    <div class="title_01">
                         <img src="<?php bloginfo('template_directory'); ?>/images/title_accses.png" alt="アクセス">
-                    </h1>
+                    </div>
                     <div class="map pc">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28624.863267331!2d127.757005!3d26.258161!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfdf388e35d023df7!2z44Kv44OD44OU44O85Lmz5YWQ5ZyS!5e0!3m2!1sja!2sjp!4v1637250734732!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                </div>
                     <div class="map sp">

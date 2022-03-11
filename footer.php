@@ -13,7 +13,7 @@
                     <a href="tel:098-898-5657"><p class="tel">TEL : 098-898-5657</p></a>
                 </div>
                 <div class="copylight">
-                    <p class="copy">Copyright © クッピー乳児園. All Rights Reserved.</p>
+                    <p class="copy">Copyright &copy; クッピー乳児園. All Rights Reserved.</p>
                 </div>
             </div>
             

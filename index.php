@@ -13,7 +13,6 @@
                 <div class="title_01">
                     <img src="<?php bloginfo('template_directory'); ?>/images/title_news.png" alt="お知らせ">
                 </div>
-
                 <div id="posts" class="news_table">
                     
                     <ul>
@@ -82,7 +81,7 @@
                 </div>
             </div>
             <div class="more_button">
-                <a href="<?php echo get_permalink( get_page_by_path( 'schedule' )->ID ); ?>">園の生活について</a>
+                <a href="<?php echo get_permalink( get_page_by_path( 'introduce' )->ID ); ?>">園の紹介について</a>
             </div>
         </section>
         <!-- section2 -->
@@ -115,7 +114,7 @@
                     個々の発達に応じた丁寧な保育を行うことができます。</p>
                 
                 <div class="section_small">
-                    <h2>＜連携施設一覧＞</h2>
+                    <div>＜連携施設一覧＞</div>
                     <p class="section_small_text">
                         ①どんぐりの里保育園　②赤道あおぞら保育園　<br>③ポケット保育園　④ぎのわんおひさま保育園
                     </p>
@@ -136,7 +135,7 @@
                         <img src="<?php bloginfo('template_directory'); ?>/images/title_en.png" alt="園について">
                     </div>
                     <div class="section_table">
-                        <h2 class="h2_box">定員状況</h2>
+                        <div class="h2_box">定員状況</div>
                         <p class="table_text">※現在空きはございません。（８月１日時点）</p>
                         <table class="syousai_table">
                             <tr>
@@ -160,7 +159,7 @@
                         </table>
                     </div>
                     <div class="section_table">
-                        <h2 class="h2_box">保育時間</h2>
+                        <div class="h2_box">保育時間</div>
                         <h3 class="h3_left"><span class="table_subtitle">《通常保育》</span></h3>
                             <table class="syousai_table">
                                 <tr>
@@ -181,7 +180,7 @@
                             </table>
                     </div>
                     <div class="section_table">
-                        <h2 class="h2_box">概要</h2>
+                        <div class="h2_box">概要</div>
                         <table class="syousai_table">
                             <tr>
                                 <th>事業所名</th>

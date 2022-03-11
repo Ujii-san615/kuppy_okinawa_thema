@@ -174,7 +174,7 @@ Template Post Type: page,post
                     <div class="tab_content" id="fulltime_content">
                         <div class="tab_content_description">
                             <div class="section_table">
-                                <h2 class="h2_box">フルタイム</h2>
+                                <div class="h2_box">フルタイム</div>
                                 <table class="syousai_table">
                                     <tr>
                                         <th>雇用形態</th>
@@ -256,7 +256,7 @@ Template Post Type: page,post
                     <div class="tab_content" id="parttime_content">
                         <div class="tab_content_description">
                             <div class="section_table">
-                                <h2 class="h2_box">パートタイム</h2>
+                                <div class="h2_box">パートタイム</div>
                                 <table class="syousai_table">
                                     <tr>
                                         <th>雇用形態</th>

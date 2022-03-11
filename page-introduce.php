@@ -38,7 +38,7 @@ Template Post Type: page,post
                 <img src="<?php bloginfo('template_directory'); ?>/images/title_gaiyou.png" alt="園の概要">
             </div>
             <div class="section_table">
-                <h2 class="h2_box">施設詳細</h2>
+                <div class="h2_box">施設詳細</div>
                 <table class="syousai_table">
                     <tr>
                         <th>施設名称</th>
@@ -94,7 +94,7 @@ Template Post Type: page,post
                 <img src="<?php bloginfo('template_directory'); ?>/images/title_teacher.png" alt="職員構成">
             </div>
             <div class="section_table">
-                <h2 class="h2_box">職員構成</h2>
+                <div class="h2_box">職員構成</div>
                 <table class="syousai_table">
                     <tr>
                         <th>代表者</th>
